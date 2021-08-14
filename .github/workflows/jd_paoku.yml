@@ -6,7 +6,7 @@ name: 「京东」跑酷
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 14 * * *'
+    - cron: '15 4 * * *'
   repository_dispatch:
     types: jd_paoku
 jobs:
