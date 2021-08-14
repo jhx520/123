@@ -6,7 +6,7 @@ name: 「京东」取关店铺商品
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 12,14,16 * * *'
+    - cron: '15 14 * * *'
   repository_dispatch:
     types: jd_unsubscribe
 jobs:
