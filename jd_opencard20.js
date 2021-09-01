@@ -6,7 +6,7 @@
 邀请一人10豆 被邀请也有5豆(有可能没有豆
 开6张卡 抽奖可能获得40京豆(有可能有抽到空气💨
 关注10京豆 (有可能是空气💨
-加购没有豆只有金币 (有可能是空气💨 默认不加购 如需加购请设置环境变量[guaopencard_addSku20]为"true"
+加购没有豆只有金币 (有可能是空气💨 默认不加购 如需加购请设置环境变量[guaopencard_20]为"true"
 
 第一个账号助力作者 其他依次助力CK1
 第一个CK失效会退出脚本
@@ -50,9 +50,9 @@ if ($.isNode()) {
 } else {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
-let guaopencard_addSku = "false"
+let guaopencard_addSku = "true"
 guaopencard_addSku = $.isNode() ? (process.env.guaopencard_addSku20 ? process.env.guaopencard_addSku20 : `${guaopencard_addSku}`) : ($.getdata('guaopencard_addSku20') ? $.getdata('guaopencard_addSku20') : `${guaopencard_addSku}`);
-let guaopencard = "false"
+let guaopencard = "true"
 guaopencard = $.isNode() ? (process.env.guaopencard20 ? process.env.guaopencard20 : `${guaopencard}`) : ($.getdata('guaopencard20') ? $.getdata('guaopencard20') : `${guaopencard}`);
 message = ""
 !(async () => {
