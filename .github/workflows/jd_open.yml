@@ -6,7 +6,7 @@ name: 「京东」开卡
 on:
   workflow_dispatch:
   repository_dispatch:
-    types: gua_opencard20
+    types: jd_opencard20
 jobs:
   build:
 
@@ -31,7 +31,7 @@ jobs:
           npm install
       - name: '运行 「京东」开卡'
         run: |
-          node gua_opencard20.js
+          node jd_opencard20.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
